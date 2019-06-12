@@ -4,8 +4,8 @@
 
 function translate() {
   var phrase = $('.user-input').val();
-  var vowels = ['a','e','i','o','u'];
-  var consonants = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z'];
+  var vowels = ['a','e','i','o','u','y'];
+  var consonants = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','z'];
   var vowelIndexes = [];
   function getFirstVowel() {
     vowels.forEach(function(x) {
@@ -30,10 +30,10 @@ function translate() {
   if (phrase === 'a' || phrase === 'e' || phrase === 'i' || phrase === 'o' || phrase === 'u') {
     $('.output').show()
     $('.output .results').show().append(phrase + 'ay');
-  } else if (vowels.includes(phrase.charAt(0))) {
+  } else if (vowels.includes(phrase.charAt(0)) && phrase.charAt(0) !== 'y') {
     $('.output').show();
     $('.output .results').show().append(phrase + 'way');
-  } else if (consonants.includes(phrase.charAt(0))) {
+  } else if (consonants.includes(phrase.charAt(0)) || phrase.charAt(0) === 'y' ) {
     var firstConsonants = '';
     var indexOfFirstVowel = 0;
     getFirstVowel();
