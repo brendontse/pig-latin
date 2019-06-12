@@ -9,7 +9,10 @@ function translate() {
   if (phrase === 'a' || phrase === 'e' || phrase === 'i' || phrase === 'o' || phrase === 'u') {
     $('.output').show()
     $('.output .results').show().append(phrase + 'ay');
-  };//if statement
+  } else if (phrase.charAt(0) === 'a' || phrase.charAt(0) === 'e' || phrase.charAt(0) === 'i' || phrase.charAt(0) === 'o' || phrase.charAt(0) === 'u') {
+    $('.output').show()
+    $('.output .results').show().append(phrase + 'way');
+  }
 
 };//function Translate
 
