@@ -1,0 +1,9 @@
+.btn {
+  background-color: teal;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.output {
+  display: none;
+}
